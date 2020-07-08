@@ -1,0 +1,130 @@
+//main: ../style.less;
+.about {
+  margin: 5.4rem 0;
+
+  @media @mobile-extra-sm {
+    margin: 2.4rem 0;
+  }
+}
+.about__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1090px;
+}
+.about__photo, .about__content {
+  width: 50%;
+
+  @media @tablet {
+    width: 100%;
+  }
+}
+.about__content {
+  padding-left: 3rem;
+
+  @media @tablet {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  @media @mobile-extra-sm {
+    padding-left: 1rem;
+  }
+}
+.about__photo {
+  position: relative;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  &::before {
+    width: 413px;
+    height: 413px;
+    content: "";
+    background-color: #EFEFEF;
+    position: absolute;
+    left: 1rem;
+    bottom: 0;
+    z-index: 1;
+  }
+  @media @tablet {
+    order: 2;
+
+    &::before {
+      width: 100%;
+      height: 300px;
+      left: 0;
+    }
+    img {
+      position: relative;
+      width: 341px;
+      height: 407px;
+    }
+  }
+  @media @mobile-extra-sm {
+    &::before {
+      width: 100%;
+      height: 250px;
+      left: 0;
+    }
+    img {
+      position: relative;
+      width: 341px;
+      height: 330px;
+    }
+  }
+
+}
+.about__suptitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @black;
+
+  @media @notebook {
+    font-size: 2rem;
+  }
+  @media @mobile-sm {
+    text-align: center;
+  }
+  @media @mobile-extra-sm {
+    font-size: 1.5rem;
+  }
+}
+.about__title {
+  font-size: 6.13rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: fade(@black, 15%);
+  position: relative;
+  left: -10px;
+
+  @media @notebook {
+    font-size: 4rem;
+  }
+  @media @mobile-sm {
+    text-align: center;
+  }
+  @media @mobile-extra-sm {
+    font-size: 3rem;
+  }
+
+}
+.about__text {
+  margin-top: 1.33rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: 100%;
+  color: @grey;
+  line-height: 24px;
+
+  @media @mobile-sm {
+    text-align: center;
+  }
+}
+.about__buttons {
+  margin-top: 2.66rem;
+}

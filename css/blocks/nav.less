@@ -1,0 +1,81 @@
+//main: ../style.less;
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+
+  @media @mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    height: auto;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+.nav__link {
+  position: relative;
+  margin-left: 2rem;
+  font-size: 0.93rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: @black;
+  text-transform: uppercase;
+  transition: 0.25s linear;
+  padding-bottom: 3px;
+
+  &::after {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    content: "";
+    background-color: @black;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: width 0.2s linear;
+  }
+  &:hover:not(.nav__link--btn) {
+    &::after {
+      width: 100%;
+    }
+  }
+  &--btn {
+    border: 2px solid @black;
+    padding: 10px 30px;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: @black;
+      color: @white;
+    }
+  }
+  @media @mobile {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+
+    &--btn {
+      border: 2px solid @black;
+      padding: 10px 30px;
+      border-radius: 20px;
+
+      &:hover {
+        background-color: @black;
+        color: @white;
+      }
+    }
+  }
+}
+
+

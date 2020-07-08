@@ -1,0 +1,132 @@
+//main: ../style.less;
+.blogs {
+  margin-top: 14rem;
+
+  @media @mobile {
+    margin-top: 10rem;
+  }
+}
+.blogs__header {
+  text-align: center;
+}
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+.blog__item {
+  width: 33.333%;
+  padding: 0 1rem;
+  margin-bottom: 2.5rem;
+
+  @media @mobile {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 2.5rem;
+    max-width: 400px;
+  }
+}
+.blogs__header {
+  position: relative;
+}
+.blogs__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: @black;
+  padding-bottom: 0.4rem;
+
+  @media @mobile-sm {
+    font-size: 2rem;
+  }
+}
+.blogs__subtitle {
+  font-size: 1.2rem;
+  color: @grey;
+  font-weight: 300;
+  margin-bottom: 3.66rem;
+
+  @media @mobile-sm {
+    font-size: 1rem;
+  }
+}
+.blog__date {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 77px;
+  height: 77px;
+  background-color: @black;
+  color: @white;
+  position: absolute;
+  font-size: 1.06rem;
+  line-height: 21px;
+}
+.blog__img {
+  margin-bottom: 1.2rem;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.blog__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: @black;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: text-decoration 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.blog__cat {
+  font-size: 0.8rem;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 1.53rem;
+  margin-top: 0.53rem;
+}
+.blog__text {
+  font-size: 0.8rem;
+  color: @grey;
+  font-weight: 300;
+  margin-bottom: 2.33rem;
+
+  @media @tablet {
+    width: 100%;
+    justify-content: center;
+    line-height: 24px;
+  }
+}
+.blog__btn {
+  padding: 0.66rem 1.33rem;
+  border: 2px solid @grey;
+  border-radius: 20px;
+  color: @black;
+  background-color: @white;
+  text-decoration: none;
+  font-size: 0.93rem;
+  text-transform: uppercase;
+  transition: background-color .2s linear,
+  color .2s linear, box-shadow .2s linear,
+  border 0.2s linear;
+
+  &:hover {
+    background-color: @black;
+    border: 2px solid @black;
+    color: @white;
+    box-shadow: 2px 2px 10px fade(#000000, 24%);
+  }
+}
+.blogs__footer {
+  text-align: right;
+}
+.blogs__link {
+  color: @grey;
+  font-size: 0.93rem;
+  cursor: pointer;
+}

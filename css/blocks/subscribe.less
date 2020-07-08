@@ -1,0 +1,140 @@
+//main: ../style.less;
+
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subscribe__right {
+  width: 52%;
+  background: @grey url("http://placehold.it/470x676") center no-repeat;
+
+  @media @mobile {
+   display: none;
+  }
+}
+.subscribe__left {
+  width: 48%;
+
+  @media @mobile {
+    width: 100%;
+  }
+}
+.subscribe__container {
+  padding: 1.86rem 2.13rem 2.46rem;
+
+  @media @mobile {
+    margin: 0 auto;
+  }
+}
+.subscribe__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: left;
+  color: @black;
+
+  @media @mobile {
+    text-align: center;
+  }
+  @media @mobile-sm {
+    font-size: 2rem;
+  }
+}
+.subscribe__subtitle {
+  font-size: 1.06rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: @black;
+  padding-bottom: 2rem;
+
+  @media @mobile {
+    text-align: center;
+  }
+  @media @mobile-sm {
+    font-size: 0.93rem;
+  }
+}
+.contacts {
+  margin-bottom: 3rem;
+}
+.contacts__item {
+  display: flex;
+  padding-bottom: 0.46rem;
+
+  @media @mobile {
+    justify-content: center;
+  }
+}
+.contacts__tel {
+  width: 17px;
+  height: 17px;
+}
+.tel__text {
+  font-size: 0.93rem;
+  font-weight: 300;
+  color: @black;
+  padding-left: 0.73rem;
+}
+.email__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: @black;
+}
+
+.label {
+  display: inline-block;
+  margin-left: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: @black;
+
+  @media @mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+.input, .textarea {
+  display: block;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: @black;
+  width: 360px;
+  padding: 1.3rem 1.8rem;
+  border-radius: 1.8rem;
+  border: 1px solid fade(#707070, 30%);
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+    border: 1px solid @black;
+  }
+  @media @mobile {
+    margin: 0 auto;
+  }
+  @media @mobile-sm {
+    width: 290px;
+  }
+  @media @mobile-extra-sm {
+    width: 230px;
+  }
+}
+.email__post {
+  margin-bottom: 0.9rem;
+
+}
+.textarea {
+  resize: none;
+  height: 200px;
+}
+.btn__right {
+  margin-top: 2rem;
+  text-align: right;
+
+  @media @mobile {
+    text-align: center;
+  }
+}
+

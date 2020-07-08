@@ -1,0 +1,23 @@
+//main: ../style.less
+.burger {
+  width: 30px;
+  height: 30px;
+  display: none;
+  border: 0;
+  background: none;
+  padding-left: 0;
+  outline: none;
+
+  @media @mobile {
+    display: block;
+  }
+}
+.burger.active {
+  transform: rotateX(-45deg);
+  transition: transform 0.2s linear;
+}
+.burger__icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

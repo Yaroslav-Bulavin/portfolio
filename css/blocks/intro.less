@@ -1,0 +1,83 @@
+//main: ../style.less;
+.intro {
+  @media @mobile {
+    margin-top: 35px;
+  }
+}
+.intro__inner {
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 130px;
+  position: relative;
+  border-bottom: 1px solid fade(@grey, 30%);
+  background: url("../images/symbols.png") right top no-repeat;
+
+  @media @tablet {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    background-size: 400px auto;
+  }
+  @media @mobile-sm {
+    background: url("../images/symbols.png") center left no-repeat;
+    justify-content: center;
+  }
+}
+.intro__content {
+  width: 50%;
+  @media @mobile-sm {
+    width: 100%;
+    text-align: center;
+  }
+}
+.intro__photo {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  z-index: 1;
+
+  @media @tablet {
+    width: 350px;
+  }
+  @media @mobile-sm {
+    display: none;
+  }
+}
+.intro__subtitle {
+  font-size: 2.13rem;
+  font-weight: 200;
+  color: @black;
+
+  @media @tablet {
+    font-size: 1.5rem;
+  }
+  @media @mobile-extra-sm {
+    font-size: 1.3rem;
+  }
+}
+.intro__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: @black;
+
+  @media @tablet {
+    font-size: 2.1rem;
+  }
+  @media @mobile-extra-sm {
+    font-size: 1.8rem;
+  }
+}
+.intro__prof {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: fade(@black, 70%);
+
+  @media @tablet {
+    font-size: 1.1rem;
+  }
+  @media @mobile-extra-sm {
+    font-size: 1rem;
+  }
+}
+.social {
+  padding-top: 20px;
+}
